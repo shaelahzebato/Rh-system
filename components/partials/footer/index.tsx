@@ -9,7 +9,7 @@ const DashCodeFooter = async () => {
     const session = await auth()
     return (
         <FooterContent>
-            <div className=' md:flex  justify-between text-default-600 hidden'>
+            {/* <div className=' md:flex  justify-between text-default-600 hidden'>
                 <div className="text-center md:ltr:text-start md:rtl:text-right text-sm">
                     COPYRIGHT &copy; {new Date().getFullYear()} DashCode, All rights Reserved
                 </div>
@@ -23,7 +23,7 @@ const DashCodeFooter = async () => {
                         Codeshaper
                     </a>
                 </div>
-            </div>
+            </div> */}
             <div className='flex md:hidden justify-around items-center'>
                 <Link href="/app/chat" className="text-default-600">
                     <div>

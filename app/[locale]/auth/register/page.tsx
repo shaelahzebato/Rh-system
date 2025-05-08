@@ -43,27 +43,19 @@ const Register = () => {
                   </Link>
                 </div>
                 <div className="text-center 2xl:mb-10 mb-5">
-                  <h4 className="font-medium">Sign up</h4>
+                  <h4 className="font-medium">Créer un compte</h4>
                   <div className="text-default-500  text-base">
-                    Create an account to start using Dashcode
+                    Créez un compte pour commencer à utiliser Datta App.
                   </div>
                 </div>
                 <RegForm />
-                <div className=" relative border-b-[#9AA2AF] border-opacity-[16%] border-b pt-6">
-                  <div className=" absolute inline-block  bg-default-50 dark:bg-default-100 left-1/2 top-1/2 transform -translate-x-1/2 px-4 min-w-max text-sm  text-default-500  font-normal ">
-                    Or continue with
-                  </div>
-                </div>
-                <div className="max-w-[242px] mx-auto mt-8 w-full">
-                  <Social locale={""} />
-                </div>
                 <div className="max-w-[225px] mx-auto font-normal text-default-500  2xl:mt-12 mt-6 uppercase text-sm">
-                  Already registered?
+                  Vous avez déjà un compte ?
                   <Link
                     href="/auth/login"
                     className="text-default-900  font-medium hover:underline"
                   >
-                    Sign In
+                    Se connecter
                   </Link>
                 </div>
               </div>

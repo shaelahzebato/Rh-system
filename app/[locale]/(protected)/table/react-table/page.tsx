@@ -8,11 +8,11 @@ const ReactTablePage = () => {
     <div>
       <SiteBreadcrumb />
       <div className='space-y-6'>
-        <Card>
+        {/* <Card>
           <CardContent className="p-0">
             <ExampleOne />
           </CardContent>
-        </Card>
+        </Card> */}
         <Card>
           <CardContent className="p-0">
             <ExampleTwo />

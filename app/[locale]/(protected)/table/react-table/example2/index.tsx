@@ -26,6 +26,7 @@ import {
 
 import { data } from "./data"
 import TablePagination from "./table-pagination"
+import CreateUser from "@/components/users/create-user"
 
 const ExampleTwo= () => {
   const [sorting, setSorting] = React.useState<SortingState>([])
@@ -58,10 +59,10 @@ const ExampleTwo= () => {
   return (
     <div className="w-full">
       <div className="flex items-center py-4 px-5">
-        <div className="flex-1 text-xl font-medium text-default-900">Customer Order</div>
+        <div className="flex-1 text-xl font-medium text-default-900">Candidatures à valider</div>
         <div className="flex-none">
           <Input
-            placeholder="Filter Status..."
+            placeholder="Filtrer les status..."
             value={(table.getColumn("status")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("status")?.setFilterValue(event.target.value)
@@ -69,6 +70,7 @@ const ExampleTwo= () => {
             className="max-w-sm "
           />
         </div>
+        <CreateUser/>
       </div>
 
       <Table>

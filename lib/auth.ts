@@ -9,13 +9,13 @@ import { getUserByEmail, type User } from "./data";
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
 
-  session: {
-    strategy: "jwt",
-  },
-  providers: [
-    Google,
-    GitHub,
-     CredentialsProvider({
+    session: {
+        strategy: "jwt",
+    },
+    providers: [
+        Google,
+        GitHub,
+        CredentialsProvider({
             credentials: {
               
                 email: {},
@@ -43,5 +43,5 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
             },
         }),
    
-  ],
+    ],
 });

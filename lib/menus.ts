@@ -88,7 +88,7 @@ export type SubChildren = {
               {
                 href: "/candidature/a-valider",
                 label: "Candidatures à valider",
-                active: pathname === "/candidature/a-valider",
+                active: pathname === "/candidature/à-valider",
                 icon: "heroicons:clipboard-document-check",
                 children: [],
               },

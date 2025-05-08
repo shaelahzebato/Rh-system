@@ -16,8 +16,8 @@ import { toast } from "sonner"
 import { useRouter } from '@/components/navigation';
 
 const schema = z.object({
-  email: z.string().email({ message: "Your email is invalid." }),
-  password: z.string().min(4),
+  email: z.string().email({ message: "Votre email est invalide." }),
+  password: z.string().min(4, {message: "Votre mot de passe doit contenir au moins 4 lettres."}),
 });
 const LoginForm = () => {
   const [isPending, startTransition] = React.useTransition();
@@ -56,7 +56,7 @@ const LoginForm = () => {
 
           })
         } else {
-          router.push('/dashboard/analytics');
+          router.push('/dashboard');
           toast.success("Successfully logged in");
         }
       } catch (err: any) {
@@ -89,7 +89,7 @@ const LoginForm = () => {
 
       <div className="mt-3.5 space-y-2">
         <Label htmlFor="password" className="mb-2 font-medium text-default-600">
-          Password{" "}
+          Mot de passe{" "}
         </Label>
         <div className="relative">
           <Input size="lg"
@@ -125,18 +125,18 @@ const LoginForm = () => {
       <div className="flex justify-between">
         <div className="flex gap-2 items-center">
           <Checkbox id="checkbox" defaultChecked />
-          <Label htmlFor="checkbox">Keep Me Signed In</Label>
+          <Label htmlFor="checkbox">Gardez moi connecte</Label>
         </div>
         <Link
           href="/auth/forgot-password"
           className="text-sm text-default-800 dark:text-default-400 leading-6 font-medium"
         >
-          Forgot Password?
+          Mot de passe oublie ?
         </Link>
       </div>
       <Button fullWidth disabled={isPending}>
         {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-        {isPending ? "Loading..." : "Sign In"}
+        {isPending ? "Loading..." : "Se connecter"}
       </Button>
     </form>
   );
